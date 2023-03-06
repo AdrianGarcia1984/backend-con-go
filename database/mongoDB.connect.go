@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"time"
-
+	"os"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -16,9 +16,14 @@ import (
 
 
 func GetCollection (collection string) *mongo.Collection{
-	
-	URI := fmt.Sprintf("mongodb://localhost:%d", 27017)
-
+	URIM:="mongodb+srv://adriancitogarcia:Ferchog123@cluster0.mhbnhxt.mongodb.net/test"
+	URIMongo:=os.Getenv("URI-mongodb")
+	fmt.Println("desde env",URIMongo)
+	if URIMongo == ""{
+        URIMongo = "mongodb://localhost:27017"
+    }
+	URI := fmt.Sprintf(URIM)
+	fmt.Println(URI)
 	client, err := mongo.NewClient(options.Client().ApplyURI(URI))
 
 	if err!= nil{

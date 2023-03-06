@@ -154,7 +154,8 @@ function AppNotes() {
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(user => (
+                        {!users?<h1>no hay usuarios registrados</h1>:                        
+                        users.map(user => (
 
                             <tr key={user.id}>
 

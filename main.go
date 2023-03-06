@@ -21,6 +21,7 @@ import (
 func main() {
 
 	port := os.Getenv("PORT")
+	
 
 	if port == "" {
 		port = "3000"
@@ -30,7 +31,9 @@ func main() {
 	//client, err:= mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017/mongo-go"))
 	//coll:=client.Database("mongo-go").Collection("users")
 
-	app.Static("/", "./public")
+	app.Static("/", "./client_vite/dist")
+	//app.Static("/", "./public")
+
 	app.Use(cors.New())
 
 	app.Get("/users", func(c *fiber.Ctx) error {
