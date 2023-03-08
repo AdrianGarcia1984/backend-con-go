@@ -15,7 +15,6 @@ import (
 		database = "mongo-go"
 	)
 
-
 func GetCollection (collection string) *mongo.Collection{
 
 	errEnv:= godotenv.Load(".env")
@@ -34,7 +33,6 @@ func GetCollection (collection string) *mongo.Collection{
 
 	URI:=envMap["URI_mongodb"]
 	
-	//fmt.Println(envMap["URI_mongodb"])
 	if URI == ""{
         URI = "mongodb://localhost:27017"
     }
