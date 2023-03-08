@@ -7,6 +7,7 @@ import (
 	"os"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/joho/godotenv"
 )
 
 	var (
@@ -16,14 +17,28 @@ import (
 
 
 func GetCollection (collection string) *mongo.Collection{
-	URIM:="mongodb+srv://adriancitogarcia:Ferchog123@cluster0.mhbnhxt.mongodb.net/test"
-	URIMongo:=os.Getenv("URI-mongodb")
-	fmt.Println("desde env",URIMongo)
-	if URIMongo == ""{
-        URIMongo = "mongodb://localhost:27017"
+
+	errEnv:= godotenv.Load(".env")
+
+	if errEnv!= nil {
+        fmt.Println(errEnv)
+		os.Exit(1)
     }
-	URI := fmt.Sprintf(URIM)
-	fmt.Println(URI)
+
+	envMap, envErr:= godotenv.Read(".env")
+
+	if envErr!= nil {
+        fmt.Println(envErr)
+		os.Exit(1)
+    }
+
+	URI:=envMap["URI_mongodb"]
+	
+	//fmt.Println(envMap["URI_mongodb"])
+	if URI == ""{
+        URI = "mongodb://localhost:27017"
+    }
+
 	client, err := mongo.NewClient(options.Client().ApplyURI(URI))
 
 	if err!= nil{

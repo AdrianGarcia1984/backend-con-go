@@ -21,7 +21,7 @@ import (
 func main() {
 
 	port := os.Getenv("PORT")
-	
+	fmt.Println("port ",port)
 
 	if port == "" {
 		port = "3000"
@@ -104,7 +104,7 @@ func main() {
 		})
 	})
 
-	app.Listen(":3000")
-	fmt.Println("escuchando desde el puerto 3000")
+	app.Listen(port)
+	fmt.Println("escuchando desde el puerto: "+port)
 
 }
