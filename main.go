@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("port ",port)
 
 	if port == "" {
-		port = "3000"
+		port = ":3000"
 	}
 
 	app := fiber.New()
