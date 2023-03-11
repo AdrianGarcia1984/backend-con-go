@@ -31,9 +31,9 @@ func GetCollection (collection string) *mongo.Collection{
 	// 	os.Exit(1)
     // }
 
-	 //URI:=envMap["URI_MONGODB"]
+	//  URI:=envMap["URI_MONGODB"]
 	 URI:=os.Getenv("URI_MONGODB")
-	 fmt.Println(URI)
+	 fmt.Println("uri: ",URI)
 	
 	if URI == ""{
         URI = "mongodb://localhost:27017"
