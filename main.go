@@ -31,8 +31,8 @@ func main() {
 	//client, err:= mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017/mongo-go"))
 	//coll:=client.Database("mongo-go").Collection("users")
 
-	app.Static("/", "./client_vite/dist")
-	//app.Static("/", "./public")
+	//app.Static("/", "./client_vite/dist")
+	app.Static("/", "./public")
 
 	app.Use(cors.New())
 
@@ -43,6 +43,14 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
+
+		if len(users)==0{
+			c.Status(fiber.StatusNotFound)
+            return c.JSON(&fiber.Map{
+				"ok":   false,
+			})
+		}
+
 
 		return c.JSON(&fiber.Map{
 			"ok":   true,
@@ -104,7 +112,7 @@ func main() {
 		})
 	})
 
-	app.Listen(":"+port)
-	fmt.Println("escuchando desde el puerto: "+port)
+	app.Listen(":3000")
+	fmt.Println("escuchando desde el puerto: "+ port)
 
 }

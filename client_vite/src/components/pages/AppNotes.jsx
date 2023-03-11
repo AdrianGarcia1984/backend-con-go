@@ -7,11 +7,14 @@ function AppNotes() {
     const [edit, setEdit] = useState(false);
     const [dataForm, SetDataForm] = useState({ name: "", email: ""})
     const [users, setUsers] = useState([])
+    const [status, setStatus] = useState(true)
 
     const obtenerDatos = async () => {
         const res = await fetch(import.meta.env.VITE_API + '/users')
         const data = await res.json()
-        setUsers(data.users)
+        //console.log(data)
+        data.ok!=false? (setStatus(true),setUsers(data.users)):setStatus(false)
+        
     }
 
     const handleSubmit = async () => {
@@ -154,7 +157,7 @@ function AppNotes() {
                         </tr>
                     </thead>
                     <tbody>
-                        {!users?<h1>no hay usuarios registrados</h1>:                        
+                        {!status?<h1>no hay usuarios registrados</h1>:                        
                         users.map(user => (
 
                             <tr key={user.id}>
