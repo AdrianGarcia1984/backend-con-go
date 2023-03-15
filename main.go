@@ -21,7 +21,7 @@ import (
 func main() {
 
 	port := os.Getenv("PORT")
-	fmt.Println("port ",port)
+	fmt.Println("port: ",port)
 
 	if port == "" {
 		port = ":3000"
