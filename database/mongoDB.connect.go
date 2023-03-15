@@ -33,7 +33,7 @@ func GetCollection (collection string) *mongo.Collection{
 
 	//  URI:=envMap["URI_MONGODB"]
 	 URI:=os.Getenv("URI_MONGODB")
-	 os.Getenv("URI_MONGODB")
+	 
 	 fmt.Println("uri: ",os.Getenv("URI_MONGODB"))
 	
 	if URI == ""{
@@ -52,7 +52,7 @@ func GetCollection (collection string) *mongo.Collection{
 	if err!= nil{
 		panic(err.Error())
 	}
-
+	fmt.Println("base de datos conectada en: "+URI)
 	return client.Database(database).Collection(collection)
 
 }
