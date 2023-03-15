@@ -28,7 +28,6 @@ const RickAndMortyApp = () => {
     setCurrentChar(id)
   }
 
-
   const onChangeTextSearch = (e) => {
     e.preventDefault()
     const text = inputRef.current.value
@@ -61,6 +60,8 @@ const RickAndMortyApp = () => {
   return (
     <>
     <div className='py-8 mx-8 flex flex-col md:max-w-xl md:flex-row '>
+    <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE RICK AND MORTY</h1>
+            <p className='text-gray-400 md:text-left m-2'>Busca tu personaje favorito en la API de Rick and Morty, en esta parte se consume y se muestra en una pequeña Card.</p>
       <div className="md:w-1/3 mr-3">
         <input
         className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mb-4'
