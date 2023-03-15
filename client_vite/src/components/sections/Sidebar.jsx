@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  FaBehance,
-  FaDribbble,
   FaFacebookF,
   FaGithub,
   FaInstagram,
@@ -12,46 +10,36 @@ import {
 import profile from "../../images/foto_perfil_adrian.jpg";
 
 const socials = [
-  {
-    id: 1,
-    icon: <FaFacebookF />,
-    link: "#0",
-  },
+  // {
+  //   id: 1,
+  //   icon: <FaFacebookF />,
+  //   link: "#0",
+  // },
   {
     id: 2,
     icon: <FaGithub />,
-    link: "#0",
+    link: "https://github.com/AdrianGarcia1984",
   },
   {
     id: 3,
     icon: <FaLinkedinIn />,
     link: "https://www.linkedin.com/in/adrian-garcia-dev",
   },
-  {
-    id: 4,
-    icon: <FaInstagram />,
-    link: "#0",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FaInstagram />,
+  //   link: "#0",
+  // },
   // {
   //   id: 5,
   //   icon: <FaBehance />,
   //   link: "#0",
   // },
   // {
-  //   id: 6,
-  //   icon: <FaDribbble />,
-  //   link: "#0",
-  // },
-  // {
   //   id: 7,
-  //   icon: <FaSkype />,
+  //   icon: <FaTwitter />,
   //   link: "#0",
   // },
-  {
-    id: 7,
-    icon: <FaTwitter />,
-    link: "#0",
-  },
 ];
 
 const Sidebar = () => {
