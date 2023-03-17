@@ -17,21 +17,6 @@ import (
 
 func GetCollection (collection string) *mongo.Collection{
 
-	// errEnv:= godotenv.Load(".env")
-
-	// if errEnv!= nil {
-    //     fmt.Println(errEnv)
-	// 	os.Exit(1)
-    // }
-
-	// envMap, envErr:= godotenv.Read(".env")
-
-	// if envErr!= nil {
-    //     fmt.Println(envErr)
-	// 	os.Exit(1)
-    // }
-
-	//  URI:=envMap["URI_MONGODB"]
 	 URI:=os.Getenv("URI_MONGODB")
 	 
 	 fmt.Println("uri: ",os.Getenv("URI_MONGODB"))

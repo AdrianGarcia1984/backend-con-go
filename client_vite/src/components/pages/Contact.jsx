@@ -16,9 +16,11 @@ const Contact = () => {
       <p className="text-gray-500 mb-2">adriancitogarcia@gmail.com</p>
     </div>
     <div className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-      <form>
+      <form action="https://formsubmit.co/adriancitogarcia@gmail.com" method="POST">
         <div className="form-group mb-6">
-          <input type="text" className="form-control block
+          <input 
+          type="text" 
+          className="form-control block
             w-full
             px-3
             py-1.5
@@ -31,11 +33,15 @@ const Contact = () => {
             transition
             ease-in-out
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+            id="name"
+            name="name"
             placeholder="Nombre"/>
         </div>
         <div className="form-group mb-6">
-          <input type="email" className="form-control block
+          <input 
+          type="email" 
+          className="form-control block
             w-full
             px-3
             py-1.5
@@ -48,12 +54,14 @@ const Contact = () => {
             transition
             ease-in-out
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+            id="email"
+            name="email"
             placeholder="Email"/>
         </div>
         <div className="form-group mb-6">
-          <textarea className="
-            form-control
+          <textarea 
+          className="form-control
             block
             w-full
             px-3
@@ -67,15 +75,21 @@ const Contact = () => {
             transition
             ease-in-out
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-          " id="exampleFormControlTextarea13" rows="3" placeholder="Mensaje"></textarea>
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+          id="mensaje"
+          name="mensaje"
+          rows="3" 
+          placeholder="Mensaje"></textarea>
         </div>
-        <div className="form-group form-check text-center mb-6">
+        {/* <div className="form-group form-check text-center mb-6">
           <input type="checkbox"
             className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
-            id="emailCheked" />
+            id="emailCheked"
+            name="_cc"
+            value={document.getElementById("email")}
+            />
           <label className="form-check-label inline-block text-gray-800" htmlFor="emailCheked">enviame una copia</label>
-        </div>
+        </div> */}
         <button type="submit" className="
           w-full
           px-6
@@ -94,6 +108,10 @@ const Contact = () => {
           transition
           duration-150
           ease-in-out">enviar</button>
+        <input type="hidden" name="_next" value="https://adriangarcia.co"></input>
+        <input type="hidden" name="_captcha" value="false"></input>
+
+
       </form>
     </div>
   </div>
