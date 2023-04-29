@@ -30,7 +30,9 @@ func main() {
 	app := fiber.New()
 	//client, err:= mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017/mongo-go"))
 	//coll:=client.Database("mongo-go").Collection("users")
+	
 
+	//cambiar para subir a despliegue
 	app.Static("/", "./client_vite/dist")
 	//app.Static("/", "./public")
 

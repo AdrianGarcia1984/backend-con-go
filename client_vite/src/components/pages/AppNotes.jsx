@@ -103,9 +103,9 @@ function AppNotes() {
 
     return (
         <section className="App py-8">
-            <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE NOTAS</h1>
-            <p className='text-gray-400 md:text-left m-2'>Pequeña aplicacion CRUD de registro de usuarios, la cual esta conectada a una base de datos en Mongo-DB, el backend es programado en GO con Fiber.</p>
-            <h2 className='text-2xl text-gray-800 font-bold mb-4' >Registro de Usuarios</h2>
+            <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE REGISTRO DE USUARIOS</h1>
+            <p className='text-gray-400 md:text-left m-2 text-justify'>Pequeña aplicacion CRUD de registro de usuarios, la cual esta conectada a una base de datos en Mongo-DB, el backend es programado en GO con Fiber.</p>
+            <h2 className='text-2xl text-gray-800 font-bold mb-4' >Registro</h2>
             <section className='form-crud sm:w-auto mt-2'>
                 <form className='w-full max-w-sm mb-2' onSubmit={action} >
                     <div className='md:flex md:items-center mb-6'>
