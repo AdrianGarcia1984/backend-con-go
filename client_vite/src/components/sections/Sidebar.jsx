@@ -55,7 +55,7 @@ const SocialIcon = (props) => {
   return (
     <li className="m-2">
       <a
-        href={link}
+        href={link} target="_blank"
         className="w-8 h-8 bg-blue-100 rounded text-blue-800 flex items-center justify-center hover:text-white hover:bg-blue-600">
         {icon}
       </a>

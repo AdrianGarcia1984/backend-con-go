@@ -60,11 +60,13 @@ const RickAndMortyApp = () => {
   return (
     <>
     <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE RICK AND MORTY</h1>
-            <p className='text-gray-400 md:text-left m-2'>Busca tu personaje favorito en la API de Rick and Morty, en esta parte se consume y se muestra en una pequeña Card.</p>
+            <p className='text-gray-400 md:text-left m-2'>Busca tu personaje favorito en la API de Rick and Morty</p>
+            <p className='text-gray-400 md:text-left m-2'>En esta parte se consume la API de RICK and MORTY y se renderiza en una pequeña Card.</p>
+            <p className='text-gray-400 md:text-left m-2'>Tecnologias: TailwindCSS, reactJS, JavaScript</p>
     <div className='py-8 mx-8 flex flex-col md:max-w-xl md:flex-row '>
       <div className="md:w-1/3 mr-3">
         <input
-        className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mb-4'
+        className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mb-4 hover:bg-blue-200 hover:text-white-100'
         type='text' ref={inputRef}
           onChange={onChangeTextSearch}
           onKeyDown={onSearchSubmit}
@@ -73,7 +75,7 @@ const RickAndMortyApp = () => {
           {errorState.hassError && <div>{errorState.message}</div>}
           {people?.results?.map(character => (
             <li 
-            className='text-gray-600 md:text-left sm:m-0.5 md:m-1 xl:m-2 '
+            className='text-gray-400 p-1 md:text-left sm:m-0.5 md:m-1 xl:m-2  hover:text-gray-800 hover:bg-gray-200 hover:rounded'
             key={character.id} onClick={() => showDetail(character)}>{character.name} </li>
           ))}
         </ul>
@@ -83,11 +85,11 @@ const RickAndMortyApp = () => {
         <section className='flex justify-center'>
           {!detail?
             <h1>no hay personaje seleccionado</h1> :
-            <div className='flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row'>
+            <div className='flex flex-col rounded-lg bg-white shadow-lg my-2  md:max-w-xl md:flex-row'>
               <img src={detail.image} alt={detail.name} className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" />
               <div className='flex flex-col justify-start p-6'>
                 <h1 className='text-2xl font-medium '>{detail.name}</h1>
-                <ul className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                <ul className='mb-4 text-base text-neutral-600 '>
                   <li className='text-gray-600 md:text-left m-1'>status: {detail.status}</li>
                   <li className='text-gray-600 md:text-left m-1'>species: {detail.species}</li>
                   
@@ -99,14 +101,14 @@ const RickAndMortyApp = () => {
       </div>      
     </div>
     <div className='flex justify-center'>
-          <button className='relative block rounded bg-transparent py-1.5 pl-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white' onClick={() => onChangePage("first")}>first</button>
-          <button className='relative block rounded bg-transparent py-1.5 px-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white' onClick={() => onChangePage(-1)}>prev</button>
+          <button className='relative block rounded bg-transparent py-1.5 pl-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 ' onClick={() => onChangePage("first")}>first</button>
+          <button className='relative block rounded bg-transparent py-1.5 px-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 ' onClick={() => onChangePage(-1)}>prev</button>
           <a className='relative block rounded bg-primary-100 py-1.5 px-3 text-sm font-medium text-primary-700 transition-all duration-300'>{page}
           <span
             className="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]"
             >(current)</span></a>
-          <button className='relative block rounded bg-transparent py-1.5 px-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white' onClick={() => onChangePage(+1)}>next</button>
-          <button className='relative block rounded bg-transparent py-1.5 pr-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white' onClick={() => onChangePage("last")}>last</button>
+          <button className='relative block rounded bg-transparent py-1.5 px-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 ' onClick={() => onChangePage(+1)}>next</button>
+          <button className='relative block rounded bg-transparent py-1.5 pr-2 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 ' onClick={() => onChangePage("last")}>last</button>
 
         </div>
     </>

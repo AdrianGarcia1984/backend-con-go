@@ -65,7 +65,7 @@ const skills = [
   },
   {
     id:12,
-    icon:<img src={golang} className="w-6 h-6"></img>,
+    icon:<img src={golang} className="w-5"></img>,
     name:"Go" 
 
   },
@@ -79,12 +79,9 @@ const Main = () => {
           <div className="md:mx-4">
             <h3 className="text-2xl text-gray-800 font-bold mb-4">Quien soy?</h3>
             <p className="text-sm text-gray-400 leading-6 text-justify mb-3 ">
-              Apasionado por la tecnologia, la programacion, el mundo del motor, la fotografia y estar en familia, despues de trabajar mas de 20 años como dragoneante del INPEC, cambie mi rumbo hacia el mundo de la programacion, tecnologo en sistemas, graduado del SENA en el año 2015, con diplomado en desarrollo web FullStack, y diferentes cursos que me han permitido adquirir conocimientos en diferentes ambitos del mundo del desarrollo web.
+              Apasionado por la tecnologia, la programacion, el mundo del motor, la fotografia y de estar en familia, despues de trabajar mas de 20 años como dragoneante del INPEC, ahora en rol del mundo de la programacion, tecnologo en sistemas, graduado del SENA en el año 2015, con diplomado en desarrollo web FullStack, y diferentes cursos que me han permitido adquirir conocimientos en diferentes ambitos del mundo del desarrollo web.
             </p>
             <h3 className="text-2xl text-gray-800 font-bold mb-4">Skills</h3>
-            {/* <p className="text-sm text-gray-400 leading-6 mb-3">
-              tecnologias:
-               </p> */}
 
              <ul className="
               
