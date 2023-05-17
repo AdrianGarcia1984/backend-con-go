@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import {FaTrash, FaEdit} from "react-icons/fa";
 import Formulario from '../sections/Formulario';
+import Loading from '../sections/Loading';
 
 function AppNotes() {
     
     const [edit, setEdit] = useState(false);
     const [dataForm, SetDataForm] = useState({ name: "", email: ""})
     const [users, setUsers] = useState([])
-    const [status, setStatus] = useState(true)
+    const [status, setStatus] = useState(false)
 
     const obtenerDatos = async () => {
         const res = await fetch(import.meta.env.VITE_API + '/users')
@@ -149,7 +150,9 @@ function AppNotes() {
                 /> */}
             <h2 className='text-2xl text-gray-800 font-bold mb-4 ' >Tabla de Usuarios Registrados</h2>
             <section className=' md:w-auto'>
-                <table className='sm:table-auto md:table-fixed text-gray-700 shadow md:w-auto'>
+                {
+                    !status? <Loading/>:
+                    <table className='sm:table-auto md:table-fixed text-gray-700 shadow md:w-auto'>
                     <thead>
                         <tr>
                             <th className='border-2 w-1/4 px-4 py-2'>Nombre</th>
@@ -159,7 +162,7 @@ function AppNotes() {
                         </tr>
                     </thead>
                     <tbody>
-                        {!status?<h1>no hay usuarios registrados</h1>:                        
+                        {                         
                         users.map(user => (
 
                             <tr key={user.id}>
@@ -183,6 +186,8 @@ function AppNotes() {
                         )}
                     </tbody>
                 </table>
+                }
+
             </section>
         </section>
     )
