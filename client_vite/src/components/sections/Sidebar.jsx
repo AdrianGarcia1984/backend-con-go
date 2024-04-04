@@ -26,8 +26,8 @@ const Sidebar = () => {
       </div>
       <div className="text-center">
         <h1 className="text-xl text-gray-800 font-bold mb-1">Adrian Garcia</h1>
-        <p className="text-sm text-gray-400 mb-3">
-          FullStack Web Developer
+        <p className="text-sm text-gray-500 mb-3">
+          FullStack Web Developer- QA-Automation
         </p>
 
         <ul className="flex flex-wrap justify-center">
@@ -40,9 +40,25 @@ const Sidebar = () => {
         <h3 className="text-md mb-2 uppercase font-medium text-gray-800">
           sobre mi
         </h3>
-        <p className="text-gray-400 text font-light leading-relaxed text-justify">
-          Desarrollador web junior, entusiasta de aprender y superar mis conocimientos, me encanta aprender algo nuevo todos los dias, esposo y padre de 2 hermosos hijos.
+        <p className="text-gray-500 text font-light leading-relaxed text-justify mb-2">
+          Desarrollador web fullstack y QA-Automation, entusiasta de aprender y superar mis conocimientos, me encanta aprender algo nuevo todos los dias.
         </p>
+        <button className="w-full px-6
+          py-2.5
+          bg-blue-600
+          text-white
+          font-medium
+          text-xs
+          leading-tight
+          uppercase
+          rounded
+          shadow-md
+          hover:bg-blue-700 hover:shadow-lg
+          focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-blue-800 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out"><a href="https://drive.google.com/file/d/1OxKI4T8WnJGomzP1OBEmyVxg0Vho99i1/preview" target="_blank" rel="noopener noreferrer" download="curriculumAdrianGarcia.pdf">descargar curriculum</a></button>
       </div>
     </aside>
   );

@@ -15,6 +15,9 @@ const Navbar = () => {
             <li className="m-3 lg:mx-5">        
                 Portfolio</li>
             </NavLink> */}
+
+
+
             <NavLink to="/notes">
             <li className="m-3 lg:mx-5">        
                 Usuarios</li>

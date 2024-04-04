@@ -60,9 +60,9 @@ const RickAndMortyApp = () => {
   return (
     <>
     <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE RICK AND MORTY</h1>
-            <p className='text-gray-400 md:text-left m-2'>Busca tu personaje favorito en la API de Rick and Morty</p>
-            <p className='text-gray-400 md:text-left m-2'>En esta parte se consume la API de RICK and MORTY y se renderiza en una pequeña Card.</p>
-            <p className='text-gray-400 md:text-left m-2'>Tecnologias: TailwindCSS, reactJS, JavaScript</p>
+            <p className='text-gray-500 md:text-left m-2'>Busca tu personaje favorito en la API de Rick and Morty</p>
+            <p className='text-gray-500 md:text-left m-2'>En esta parte se consume la API de RICK and MORTY y se renderiza en una pequeña Card.</p>
+            <p className='text-gray-500 md:text-left m-2'>Tecnologias: TailwindCSS, reactJS, JavaScript</p>
     <div className='py-8 mx-8 flex flex-col md:max-w-xl md:flex-row '>
       <div className="md:w-1/3 mr-3">
         <input
@@ -75,7 +75,7 @@ const RickAndMortyApp = () => {
           {errorState.hassError && <div>{errorState.message}</div>}
           {people?.results?.map(character => (
             <li 
-            className='text-gray-400 p-1 md:text-left sm:m-0.5 md:m-1 xl:m-2  hover:text-gray-800 hover:bg-gray-200 hover:rounded'
+            className='text-gray-500 p-1 md:text-left sm:m-0.5 md:m-1 xl:m-2  hover:text-gray-800 hover:bg-gray-200 hover:rounded'
             key={character.id} onClick={() => showDetail(character)}>{character.name} </li>
           ))}
         </ul>

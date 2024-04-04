@@ -105,9 +105,9 @@ function AppNotes() {
     return (
         <section className="App py-8">
             <h1 className='text-2xl text-gray-800 font-bold mb-4 '>APLICACION DE REGISTRO DE USUARIOS</h1>
-            <p className='text-gray-400 md:text-left m-2 text-justify'>Pequeña aplicacion CRUD de registro de usuarios.</p>
-            <p className='text-gray-400 md:text-left m-2 text-justify'>Descripcion: Aplicacion conectada a un Backend es desarrollado en GO con Fiber como framework, la cual se conecta a una base de datos desarrollada en Mongo-DB.</p>
-            <p className='text-gray-400 md:text-left m-2 text-justify'>Tecnologias: GO, ReactJs, Javascript, TailwindCSS, MongoDB.</p>
+            <p className='text-gray-500 md:text-left m-2 text-justify'>Pequeña aplicacion CRUD de registro de usuarios.</p>
+            <p className='text-gray-500 md:text-left m-2 text-justify'>Descripcion: Aplicacion conectada a un Backend es desarrollado en GO con Fiber como framework, la cual se conecta a una base de datos desarrollada en Mongo-DB.</p>
+            <p className='text-gray-500 md:text-left m-2 text-justify'>Tecnologias: GO, ReactJs, Javascript, TailwindCSS, MongoDB.</p>
             <h2 className='text-2xl text-gray-800 font-bold mb-4' >Registro</h2>
             <section className='form-crud sm:w-auto mt-2'>
                 <form className='w-full max-w-sm mb-2' onSubmit={action} >
@@ -167,9 +167,9 @@ function AppNotes() {
 
                             <tr key={user.id}>
 
-                                <td className='border-2 px-4 py-2 text-gray-400'>{user.name}</td>
-                                <td className='border-2 px-4 py-2 text-gray-400'>{user.email}</td>
-                                <td className='border-2 px-4 py-2 text-gray-400'>{user.created_at}</td>
+                                <td className='border-2 px-4 py-2 text-gray-500'>{user.name}</td>
+                                <td className='border-2 px-4 py-2 text-gray-500'>{user.email}</td>
+                                <td className='border-2 px-4 py-2 text-gray-500'>{user.created_at}</td>
                                 <td className='border-2 px-4 py-2'>
                                     
                                     <button 
