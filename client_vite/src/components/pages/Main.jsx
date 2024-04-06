@@ -6,7 +6,7 @@ import selenium from "../../assets/selenium.svg"
 import maven from "../../assets/apachemaven.svg"
 import postman from "../../assets/postman.svg"
 import appium from "../../assets/appium.svg"
-import golang from "../../assets/Go-Logo_Blue.svg"
+import golang from "../../assets/golang.svg"
 
 
 const skills = [
